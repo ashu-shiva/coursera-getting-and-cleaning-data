@@ -1,24 +1,21 @@
-Getting and Cleaning Data: Course Project
-Introduction
+Class Project for "Getting and Cleaning Data"
 
-This repository contains my work for the course project for the Coursera course "Getting and Cleaning data", part of the Data Science specialization. What follows first are my notes on the original data.
+The class project for Getting and Cleaning Data was to read in the "Human Activity Recognition Using Smartphones" data set, perform an analysis on the data set, and output a tidy data set.
 
-About the raw data
+Here are the steps that must be performed before running the R script:
 
-The features (561 of them) are unlabeled and can be found in the x_test.txt. The activity labels are in the y_test.txt file. The test subjects are in the subject_test.txt file.
+Download the zip file from this URL.
+Unzip the file.
+Move ALL of the following files to the SAME DIRECTORY as the R script:
+features.txt
+subject_train.txt
+subject_test.txt
+X_train.txt
+X_test.txt
+y_train.txt
+y_test.txt
+Once those steps are complete, you can run the R script (run_analysis.R). Note that it requires the reshape2 package, which can be downloaded from CRAN.
 
-The same holds for the training set.
+The output of the R script is a tidy data set, tidy.csv.
 
-About the script and the tidy dataset
-
-I created a script called run_analysis.R which will merge the test and training sets together. Prerequisites for this script:
-
-the UCI HAR Dataset must be extracted and..
-the UCI HAR Dataset must be availble in a directory called "UCI HAR Dataset"
-After merging testing and training, labels are added and only columns that have to do with mean and standard deviation are kept.
-
-Lastly, the script will create a tidy data set containing the means of all the columns per test subject and per activity. This tidy dataset will be written to a tab-delimited file called tidy.txt, which can also be found in this repository.
-
-About the Code Book
-
-The CodeBook.md file explains the transformations performed and the resulting data and variables.
+You can read more about the data and the analysis in the code book.
